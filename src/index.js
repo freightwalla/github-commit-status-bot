@@ -74,7 +74,8 @@ exports.getPipelineExecution = async (pipelineName, executionId) => {
   const revisionURL = artifactRevision.revisionUrl;
   const sha = artifactRevision.revisionId;
 
-  const pattern = /github.com\/(.+)\/(.+)\/commit\//;
+  //const pattern = /github.com\/(.+)\/(.+)\/commit\//;
+  const pattern = /RepositoryId=(.+)\/(.+)&/;
   const matches = pattern.exec(revisionURL);
 
   return {
